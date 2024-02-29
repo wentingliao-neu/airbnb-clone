@@ -27,7 +27,6 @@ export default async function RootLayout({
    const currentUser = await getCurrentUser();
    return (
       <html lang="en">
-         {/* <Logo /> */}
          <body className={inter.className}>
             <ClientOnly>
                <ToasterProvider />
