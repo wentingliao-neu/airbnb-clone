@@ -11,6 +11,7 @@ export default async function ListingPage({ params }: { params: IParams }) {
    const listing = await getListingById(params);
    const reservations = await getReservations(params);
    const currentUser = await getCurrentUser();
+
    return listing ? (
       <ClientOnly>
          <ListingClient

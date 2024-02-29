@@ -22,7 +22,7 @@ export default async function getListingById(params: IParams) {
             ...listing.user,
             createAt: listing.user.createAt.toISOString(),
             updateAt: listing.user.updateAt.toISOString(),
-            emaliVerified: listing.user.emailVerified?.toISOString() || null,
+            emailVerified: listing.user.emailVerified?.toISOString() || null,
          },
       };
    } catch (err: any) {
