@@ -96,8 +96,11 @@ const ListingClient: React.FC<Props> = ({
       }
    }, [dateRange, listing.price]);
    const category = useMemo(() => {
-      return categories.find((item) => item.label === listing.category);
+      return (
+         categories.find((items) => items.label === listing.category) || null
+      );
    }, [listing.category]);
+
    return (
       <Container>
          <div className="max-w-screen-lg mx-auto">
